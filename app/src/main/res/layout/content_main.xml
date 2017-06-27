@@ -1,21 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:autofillHints="@android:color/holo_green_dark"
+    android:background="@android:color/holo_green_dark"
+    android:visibility="visible"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/activity_main"
-    tools:context="com.johir.diceout.diceout.MainActivity">
+    tools:context="com.johir.diceout.diceout.MainActivity"
+    tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/rollResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Please click the button in the bottom right corner"
+        android:textColor="@android:color/white" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/die1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rollResult"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/holo_orange_dark"
+        android:src="@drawable/die_1" />
+
+    <ImageView
+        android:id="@+id/die2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/rollResult"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="25dp"
+        android:src="@drawable/die_1" />
+
+    <ImageView
+        android:id="@+id/die3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rollResult"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/die_1" />
+
+    <TextView
+        android:id="@+id/score"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:text="Score: 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
